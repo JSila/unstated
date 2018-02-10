@@ -27,11 +27,11 @@ class CounterContainer extends Container<CounterState> {
   };
 
   increment(amount: number) {
-    this.setState({ count: this.state.count + amount });
+    this.setState(state => ({ count: state.count + amount }));
   }
 
   decrement(amount: number) {
-    this.setState({ count: this.state.count - amount });
+    this.setState(state => ({ count: state.count - amount }));
   }
 }
 
